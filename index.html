@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Java Essentials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-red': '#d82e2d',
+                        'custom-dark': '#1c2120'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1c2120 0%, #0f1211 100%);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .slide-in {
+            animation: slideIn 0.8s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header Section -->
+        <div class="text-center mb-12 slide-in">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-custom-red rounded-full mb-6 pulse-animation">
+                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <h1 class="text-5xl font-bold text-white mb-4">Thank You!</h1>
+            <p class="text-xl text-white opacity-90">Your purchase was successful</p>
+        </div>
+
+        <!-- Main Content Card -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-8 slide-in" style="animation-delay: 0.2s;">
+            <div class="text-center mb-8">
+                <div class="inline-block bg-custom-red text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    📚 EBOOK PURCHASED
+                </div>
+                <h2 class="text-3xl font-bold text-custom-red mb-2">Java Essentials: A Beginner's Guide To Programming</h2>
+                <p class="text-gray-600 text-lg">You're now ready to start your Java programming journey!</p>
+                
+
+            </div>
+
+            <!-- Access Section -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-8">
+                <h3 class="text-xl font-semibold text-custom-red mb-4 flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                    </svg>
+                    Access Your Content
+                </h3>
+                <p class="text-gray-600 mb-4 text-center">Click the button below to access your ebook and exclusive content:</p>
+                <a href="https://hotmart.com/pt-br/club/code-chill/products/6112375/ebook?access_source=hub_home_product_card" target="_blank" class="bg-custom-red hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center mx-auto w-fit">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                    </svg>
+                    Access Java Essentials
+                </a>
+            </div>
+
+            <!-- What's Next Section -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-custom-red text-white p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-3 flex items-center">
+                        🚀 Getting Started
+                    </h4>
+                    <ul class="space-y-2 text-sm opacity-90">
+                        <li>• Set up your Java development environment</li>
+                        <li>• Follow the step-by-step tutorials</li>
+                        <li>• Practice with the included exercises</li>
+                        <li>• Build your first Java application</li>
+                    </ul>
+                </div>
+                <div class="bg-custom-red text-white p-6 rounded-xl">
+                    <h4 class="text-lg font-semibold mb-3 flex items-center">
+                        💡 What You'll Learn
+                    </h4>
+                    <ul class="space-y-2 text-sm opacity-90">
+                        <li>• Java syntax and fundamentals</li>
+                        <li>• Object-oriented programming concepts</li>
+                        <li>• Data structures and algorithms</li>
+                        <li>• Best practices and coding standards</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center text-white opacity-80 slide-in" style="animation-delay: 0.4s;">
+            <p class="mb-2">Thank you for choosing Java Essentials!</p>
+            <p class="text-sm">Happy coding! 🎉</p>
+        </div>
+    </div>
+
+    <script>
+
+
+        // Add smooth animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.slide-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97675f72e5cb015a',t:'MTc1NjQyMTQ4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
